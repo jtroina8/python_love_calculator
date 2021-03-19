@@ -13,17 +13,17 @@ score = 0
 vowels = ["a", "e", "i", "o", "u", "y"]
 consonants = ["b", "c", "d", "f", "g", 'h', 'j', 'k', 'l', 'm',
               'n', 'l', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z']
-vowelsInUser1 = 0
-vowelsInUser2 = 0
+vowels_in_user1 = 0
+vowels_in_user2 = 0
 
-user1Letters = []
-user2Letters = []
+user1_letters = []
+user2_letters = []
 
 
 for letter in user1:
-    user1Letters.append(letter)
+    user1_letters.append(letter)
 for letter in user2:
-    user2Letters.append(letter)
+    user2_letters.append(letter)
 
 # both names have the same amount of consonants (work!) put in a function
 
@@ -76,7 +76,7 @@ if user1[0] == user2[0]:
     score = score + 15
 
 # if first letter in user 2 is in user1 name [Works!]
-if user2Letters[0] in user1Letters:
+if user2_letters[0] in user1_letters:
     score = score + 2
 
 # if the names have the same amount of characters, plus 20 points (WORKS!)
