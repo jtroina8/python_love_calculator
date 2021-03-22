@@ -1,3 +1,5 @@
+import time
+
 print('''
 LOVE CALCULATOR
 
@@ -35,15 +37,15 @@ def letters(user1, user2, letters):
     for i in range(len(user1)):
         if (user1[i] in letters):
             try:
-                user1_consonants[user1[i]] += 1
+                user1_consonants[user1[i]] += 8
             except KeyError:
-                user1_consonants[user1[i]] = 1
+                user1_consonants[user1[i]] = 8
     for i in range(len(user2)):
         if (user2[i] in letters):
             try:
-                user2_consonants[user2[i]] += 1
+                user2_consonants[user2[i]] += 8
             except KeyError:
-                user2_consonants[user2[i]] = 1
+                user2_consonants[user2[i]] = 8
     for key in user1_consonants:
         if key in user2_consonants:
             score += min([user1_consonants[key], user2_consonants[key]])
@@ -53,15 +55,15 @@ def letters(user1, user2, letters):
     for i in range(len(user1)):
         if (user1[i] in letters):
             try:
-                user1_vowels[user1[i]] += 1
+                user1_vowels[user1[i]] += 8
             except KeyError:
-                user1_vowels[user1[i]] = 1
+                user1_vowels[user1[i]] = 8
     for i in range(len(user2)):
         if (user2[i] in letters):
             try:
-                user2_vowels[user2[i]] += 1
+                user2_vowels[user2[i]] += 8
             except KeyError:
-                user2_vowels[user2[i]] = 1
+                user2_vowels[user2[i]] = 8
     for key in user1_vowels:
         if key in user2_vowels:
             score += min([user1_vowels[key], user2_vowels[key]])
@@ -77,15 +79,11 @@ if user1[0] == user2[0]:
 
 # if first letter in user 2 is in user1 name [Works!]
 if user2_letters[0] in user1_letters:
-    score = score + 2
+    score = score + 30
 
 # if the names have the same amount of characters, plus 20 points (WORKS!)
 if len(user1) == len(user2):
     score = score + 20
-
-# if both names have more than 5 letters (NOT GOOD?)
-if len(user1) >= 5:
-    score = score + 5
 
 # if both users name has an L O V or E in it (Works!)
 if "l" in user1:
@@ -111,51 +109,56 @@ elif "e" in user2:
 
 
 def zero():
-    print(str(score) + "%: Absolutely no chance. Like ever... ever ever. I'm literally mad you asked about this and I'm a bot.")
+    print("\n" + str(score) + "%: Absolutely no chance. Like ever... ever ever. I'm literally mad you asked about this and I'm a bot.\n")
 
 
 def one():
-    print(str(score) + "%: Yeeeeeaaaaaahhhhhhhhh—nnnnnooooo.")
+    print("\n" + str(score) + "%: Yeeeeeaaaaaahhhhhhhhh—nnnnnooooo.\n")
 
 
 def two():
-    print(str(score) + "%: I’d be surprised if you even to the friend zone.")
+    print("\n" + str(score) + "%: I’d be surprised if you even to the friend zone.\n")
 
 
 def three():
-    print(str(score) + "%: I mean, if this was a school grade, it’d only be like a F minus minus... minus?")
+    print("\n" + str(score) +
+          "%: I mean, if this was a school grade, it’d only be like a F minus minus... minus?\n")
 
 
 def four():
-    print(str(score) + "%: I mean… not TERRIBLE... definitely not good though.")
+    print("\n" + str(score) +
+          "%: I mean… not TERRIBLE... definitely not good though.\n")
 
 
 def five():
-    print(str(score) + "%: I haven't figured out what to write here yet.")
+    print("\n" + str(score) + "%: I haven't figured out what to write here yet.\n")
 
 
 def six():
-    print(str(score) + "%: At least you’re on the positive side! I’ll give it a Potential2Grow sticker.")
+    print("\n" + str(score) +
+          "%: At least you’re on the positive side! I’ll give it a Potential2Grow sticker.\n")
 
 
 def seven():
-    print(str(score) + "%: I definitely see sparks. ;)")
+    print("\n" + str(score) + "%: I definitely see sparks. ;)\n")
 
 
 def eight():
-    print(str(score) + "%: You’re either on the first date, or in the Best-Friend stage. Keep at it.")
+    print("\n" + str(score) +
+          "%: You’re either on the first date, or in the Best-Friend stage. Keep at it.\n")
 
 
 def nine():
-    print(str(score) + "%: Yaaaaassssssss!!! This. Just. This.")
+    print("\n" + str(score) + "%: Yaaaaassssssss!!! This. Just. This.\n")
 
 
 def ten():
-    print(str(score) + "%: RED ALERT! RED ALERT! THESE TWO ARE FIRE TOGETHER!!")
+    print("\n" + str(score) +
+          "%: RED ALERT! RED ALERT! THESE TWO ARE FIRE TOGETHER!!\n")
 
 
 def perfect():
-    print(str(score) + "%: <3 Always + Forver <3")
+    print("\n" + str(score) + "%: < 3 Always + Forver < 3\n")
 
 
 def result():
@@ -186,6 +189,8 @@ def result():
         perfect()
 
 
+print("\nCalculating...\n")
+time.sleep(3)
 result()
 # if score == 0:
 #    print(str(score) + "%: Absolutely no chance. Like ever... ever ever. I'm literally mad you asked about this and I'm a bot.")
