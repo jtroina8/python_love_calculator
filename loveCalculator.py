@@ -25,7 +25,7 @@ for letter in user1:
 for letter in user2:
     user2_letters.append(letter)
 
-# both names have the same amount of consonants (work!) put in a function
+# both names have the same amount of consonants/vowels (work!) put in a function
 
 
 def letters(user1, user2, letters):
@@ -47,7 +47,7 @@ def letters(user1, user2, letters):
     for key in user1_consonants:
         if key in user2_consonants:
             score += min([user1_consonants[key], user2_consonants[key]])
-    # both names have the same vowels(works!)
+
     user1_vowels = {}
     user2_vowels = {}
     for i in range(len(user1)):
@@ -108,27 +108,106 @@ elif "e" in user2:
 
 # make into a function, accept a score varible, based off the score varible = prints message
 # look into putting messages in a list
-if score == 0:
+
+
+def zero():
     print(str(score) + "%: Absolutely no chance. Like ever... ever ever. I'm literally mad you asked about this and I'm a bot.")
-elif score <= 10:
+
+
+def one():
     print(str(score) + "%: Yeeeeeaaaaaahhhhhhhhh—nnnnnooooo.")
-elif score <= 20:
+
+
+def two():
     print(str(score) + "%: I’d be surprised if you even to the friend zone.")
-elif score <= 30:
+
+
+def three():
     print(str(score) + "%: I mean, if this was a school grade, it’d only be like a F minus minus... minus?")
-elif score <= 40:
+
+
+def four():
     print(str(score) + "%: I mean… not TERRIBLE... definitely not good though.")
-elif score <= 50:
+
+
+def five():
     print(str(score) + "%: I haven't figured out what to write here yet.")
-elif score <= 60:
+
+
+def six():
     print(str(score) + "%: At least you’re on the positive side! I’ll give it a Potential2Grow sticker.")
-elif score <= 70:
+
+
+def seven():
     print(str(score) + "%: I definitely see sparks. ;)")
-elif score <= 80:
+
+
+def eight():
     print(str(score) + "%: You’re either on the first date, or in the Best-Friend stage. Keep at it.")
-elif score <= 90:
+
+
+def nine():
     print(str(score) + "%: Yaaaaassssssss!!! This. Just. This.")
-elif score <= 99:
+
+
+def ten():
     print(str(score) + "%: RED ALERT! RED ALERT! THESE TWO ARE FIRE TOGETHER!!")
-elif score == 100:
-    print(str(score) + "%: <3 Always + Forever <3")
+
+
+def perfect():
+    print(str(score) + "%: <3 Always + Forver <3")
+
+
+def result():
+    global score
+    if score == 0:
+        zero()
+    elif score <= 10:
+        one()
+    elif score <= 20:
+        two()
+    elif score <= 30:
+        three()
+    elif score <= 40:
+        four()
+    elif score <= 50:
+        five()
+    elif score <= 60:
+        six()
+    elif score <= 70:
+        seven()
+    elif score <= 80:
+        eight()
+    elif score <= 90:
+        nine()
+    elif score <= 99:
+        ten()
+    elif score == 100:
+        perfect()
+
+
+result()
+# if score == 0:
+#    print(str(score) + "%: Absolutely no chance. Like ever... ever ever. I'm literally mad you asked about this and I'm a bot.")
+# elif score <= 10:
+#    print(str(score) + "%: Yeeeeeaaaaaahhhhhhhhh—nnnnnooooo.")
+# elif score <= 20:
+#    print(str(score) + "%: I’d be surprised if you even to the friend zone.")
+# elif score <= 30:
+#    print(str(score) + "%: I mean, if this was a school grade, it’d only be like a F minus minus... minus?")
+# elif score <= 40:
+#    print(str(score) + "%: I mean… not TERRIBLE... definitely not good though.")
+# elif score <= 50:
+#    print(str(score) + "%: I haven't figured out what to write here yet.")
+# elif score <= 60:
+#    print(str(score) + "%: At least you’re on the positive side! I’ll give it a Potential2Grow sticker.")
+# elif score <= 70:
+#    print(str(score) + "%: I definitely see sparks. ;)")
+# elif score <= 80:
+#    print(str(score) + "%: You’re either on the first date, or in the Best-Friend stage. Keep at it.")
+# elif score <= 90:
+#    print(str(score) + "%: Yaaaaassssssss!!! This. Just. This.")
+# elif score <= 99:
+#    print(str(score) + "%: RED ALERT! RED ALERT! THESE TWO ARE FIRE TOGETHER!!")
+# elif score == 100:
+#    print(str(score) + "%: <3 Always + Forever <3")
