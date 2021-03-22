@@ -107,91 +107,119 @@ elif "e" in user2:
 # make into a function, accept a score varible, based off the score varible = prints message
 # look into putting messages in a list
 
-
-def zero():
-    print("\n" + str(score) + "%: Absolutely no chance. Like ever... ever ever. I'm literally mad you asked about this and I'm a bot.\n")
-
-
-def one():
-    print("\n" + str(score) + "%: Yeeeeeaaaaaahhhhhhhhh—nnnnnooooo.\n")
-
-
-def two():
-    print("\n" + str(score) + "%: I’d be surprised if you even to the friend zone.\n")
-
-
-def three():
-    print("\n" + str(score) +
-          "%: I mean, if this was a school grade, it’d only be like a F minus minus... minus?\n")
+final_result = {
+    zero: 0: "\n" + str(score) + "%: Absolutely no chance. Like ever... ever ever. I'm literally mad you asked about this and I'm a bot.\n",
+    one: range(1, 9): "\n" + str(score) + "%: Yeeeeeaaaaaahhhhhhhhh—nnnnnooooo.\n",
+    two: range(10, 19): "\n" + str(score) + "%: I’d be surprised if you even to the friend zone.\n",
+    three: range(20, 29): "\n" + str(score) + "%: I mean, if this was a school grade, it’d only be like a F minus minus... minus?\n",
+    four: range(30, 39): "\n" + str(score) + "%: I mean… not TERRIBLE... definitely not good though.\n",
+    five: range(40, 49): "\n" + str(score) + "%: I haven't figured out what to write here yet.\n",
+    six: range(50, 59): "\n" + str(score) + "%: At least you’re on the positive side! I’ll give it a Potential2Grow sticker.\n",
+    seven: range(60, 69): "\n" + str(score) + "%: I definitely see sparks. ;)\n",
+    eight: range(70, 79): "\n" + str(score) + "%: You’re either on the first date, or in the Best-Friend stage. Keep at it.\n",
+    nine: range(80, 89): "\n" + str(score) + "%: Yaaaaassssssss!!! This. Just. This.\n",
+    ten: range(90, 99): "\n" + str(score) + "%: RED ALERT! RED ALERT! THESE TWO ARE FIRE TOGETHER!!\n",
+    perfect: 100: "\n" + str(score) + "%: < 3 Always + Forver < 3\n"
+}
 
 
-def four():
-    print("\n" + str(score) +
-          "%: I mean… not TERRIBLE... definitely not good though.\n")
+def result(final):
+    final = score + final_result
+
+# def zero():
+#     print("\n" + str(score) + "%: Absolutely no chance. Like ever... ever ever. I'm literally mad you asked about this and I'm a bot.\n")
+#
+#
+# def one():
+#     print("\n" + str(score) + "%: Yeeeeeaaaaaahhhhhhhhh—nnnnnooooo.\n")
+#
+#
+# def two():
+#     print("\n" + str(score) + "%: I’d be surprised if you even to the friend zone.\n")
+#
+#
+# def three():
+#     print("\n" + str(score) +
+#           "%: I mean, if this was a school grade, it’d only be like a F minus minus... minus?\n")
+#
+#
+# def four():
+#     print("\n" + str(score) +
+#           "%: I mean… not TERRIBLE... definitely not good though.\n")
+#
+#
+# def five():
+#     print("\n" + str(score) + "%: I haven't figured out what to write here yet.\n")
+#
+#
+# def six():
+#     print("\n" + str(score) +
+#           "%: At least you’re on the positive side! I’ll give it a Potential2Grow sticker.\n")
+#
+#
+# def seven():
+#     print("\n" + str(score) + "%: I definitely see sparks. ;)\n")
+#
+#
+# def eight():
+#     print("\n" + str(score) +
+#           "%: You’re either on the first date, or in the Best-Friend stage. Keep at it.\n")
+#
+#
+# def nine():
+#     print("\n" + str(score) + "%: Yaaaaassssssss!!! This. Just. This.\n")
+#
+#
+# def ten():
+#     print("\n" + str(score) +
+#           "%: RED ALERT! RED ALERT! THESE TWO ARE FIRE TOGETHER!!\n")
+#
+#
+# def perfect():
+#     print("\n" + str(score) + "%: < 3 Always + Forver < 3\n")
 
 
-def five():
-    print("\n" + str(score) + "%: I haven't figured out what to write here yet.\n")
-
-
-def six():
-    print("\n" + str(score) +
-          "%: At least you’re on the positive side! I’ll give it a Potential2Grow sticker.\n")
-
-
-def seven():
-    print("\n" + str(score) + "%: I definitely see sparks. ;)\n")
-
-
-def eight():
-    print("\n" + str(score) +
-          "%: You’re either on the first date, or in the Best-Friend stage. Keep at it.\n")
-
-
-def nine():
-    print("\n" + str(score) + "%: Yaaaaassssssss!!! This. Just. This.\n")
-
-
-def ten():
-    print("\n" + str(score) +
-          "%: RED ALERT! RED ALERT! THESE TWO ARE FIRE TOGETHER!!\n")
-
-
-def perfect():
-    print("\n" + str(score) + "%: < 3 Always + Forver < 3\n")
-
-
-def result():
-    global score
-    if score == 0:
-        zero()
-    elif score <= 10:
-        one()
-    elif score <= 20:
-        two()
-    elif score <= 30:
-        three()
-    elif score <= 40:
-        four()
-    elif score <= 50:
-        five()
-    elif score <= 60:
-        six()
-    elif score <= 70:
-        seven()
-    elif score <= 80:
-        eight()
-    elif score <= 90:
-        nine()
-    elif score <= 99:
-        ten()
-    elif score == 100:
-        perfect()
+# def result():
+#     global score
+#     if score == 0:
+#         zero()
+#     elif score <= 10:
+#         one()
+#     elif score <= 20:
+#         two()
+#     elif score <= 30:
+#         three()
+#     elif score <= 40:
+#         four()
+#     elif score <= 50:
+#         five()
+#     elif score <= 60:
+#         six()
+#     elif score <= 70:
+#         seven()
+#     elif score <= 80:
+#         eight()
+#     elif score <= 90:
+#         nine()
+#     elif score <= 99:
+#         ten()
+#     elif score == 100:
+#         perfect()
 
 
 print("\nCalculating...\n")
 time.sleep(3)
-result()
+
+
+# result()
+
+# need a "play again" feature
+# make max score under 50, and add a RNG method for the rest
+# cap score at 100
+# fix 50% print result
+
+# first way of getting reults to work vv
+
 # if score == 0:
 #    print(str(score) + "%: Absolutely no chance. Like ever... ever ever. I'm literally mad you asked about this and I'm a bot.")
 # elif score <= 10:
